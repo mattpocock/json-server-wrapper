@@ -1,0 +1,13 @@
+{
+  "posts": [
+    {
+      "title": "Wowzer",
+      "author": "Matt Pocock",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
