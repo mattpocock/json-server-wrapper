@@ -21,8 +21,13 @@ module.exports = (method, body) => {
     case 'GET':
         break;
 
+    case 'PUT':
+        defaultObject.body = JSON.stringify(body);
+        defaultPrefix = `${defaultPrefix}${body.id}`;
+        break;
+
     default:
-        throw new Error('Bad method sent to API');
+        throw new Error('Invalid method sent to function.');
     }
 
     return fetch(

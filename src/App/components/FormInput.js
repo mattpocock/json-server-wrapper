@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FormInput = ({
     name, title, value, handleChange,
@@ -26,5 +27,17 @@ const FormInput = ({
         />
     </div>
 );
+
+FormInput.defaultProps = {
+    title: '',
+    value: '',
+};
+
+FormInput.propTypes = {
+    handleChange: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    value: PropTypes.string,
+};
 
 module.exports = FormInput;
